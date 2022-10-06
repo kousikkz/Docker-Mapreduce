@@ -1,0 +1,11 @@
+hadoop fs -mkdir /kousik
+hadoop fs -copyFromLocal /Docker.txt/Kousik/Dataset
+hadoop fs -copyFromLocal /Docker.txt/kousik/Dataset
+hadoop fs -copyFromLocal Docker.txt/kousik/Dataset
+hadoop fs -copyFromLocal Docker.txt /kousik/Dataset
+hadoop jar hadoop-mapreduce-examples-2.2.0.jar
+hadoop jar hadoop-mapreduce-examples-2.2.0.jar wordcount /kousik/Dataset /kousik/Mapreduce/Wordcount
+hadoop jar hadoop-mapreduce-examples-2.2.0.jar wordmean /kousik/Dataset /kousik/Mapreduce/Wordmean
+hadoop jar hadoop-mapreduce-examples-2.2.0.jar wordmedian /kousik/Dataset /kousik/Mapreduce/Wordmedian
+hadoop jar hadoop-mapreduce-examples-2.2.0.jar wordstandarddeviation /kousik/Dataset /kousik/Mapreduce/WordSD
+
